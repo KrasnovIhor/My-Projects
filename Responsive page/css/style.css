@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.page-wrap {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.main-story {
+    width: 100%;
+    position: relative;
+    margin: 0 0 25px 0;
+}
+
+.main-story img {
+    width: 100%;
+}
+
+img {
+    display: block;
+}
+
+a {
+    color: lightblue;
+}
+
+.story-intro {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 4em;
+}
+h1, h2 {
+    margin: 0 0 10px 0;
+}
+
+.story-intro h1 {
+    font-size: 2.5em;
+}
+.story-intro p {
+    margin: 0;
+}
+
+.sub-stories {
+    overflow: hidden;
+    margin: 0 0 25px 0;
+}
+
+.sub-story {
+    float: left;
+    min-width: 250px;
+    margin-right: 25px;
+    position: relative;
+    font-size: 0.8rem;
+}
+
+.last {
+    margin-right: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        background-color: grey;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .sub-stories {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sub-story {
+        flex-grow: 1;
+    }
+    img {
+        width: 100%;
+    }
+
+    .page-wrap > h1, .page-wrap > p {
+        margin-left: 20px;
+    }
+
+    .main-story {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .sub-story:nth-child(1) {
+        margin: 0 10px 25px 25px;
+    }
+
+    .sub-story:nth-child(2) {
+        margin: 0 25px 25px 10px;
+    }
+
+    .last {
+        margin: 0 25px 25px 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .page-wrap {
+        width: 90%;
+    }
+    .story-intro {
+        font-size: 0.8rem;
+    }
+    .story-intro h1 {
+        font-size: 1.5em;
+    }
+
+    .sub-story {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .sub-story > img {
+        width: 100%;
+    }
+    .last {
+        margin-bottom: 25px;
+    }
+}
