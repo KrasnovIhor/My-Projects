@@ -54,10 +54,11 @@ input[type=submit] {
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
+		transition: .5s;
 }
 
 input[type=submit]:hover {
-	background-color: #45a049;
+	background-color: #488c72;
 }
 
 	.contact-container {
