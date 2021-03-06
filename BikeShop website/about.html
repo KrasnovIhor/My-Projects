@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/aboutUs.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+	<title>About Us</title>
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<div class="header__logo">
+				<img src="img/Logo.png" alt="">
+				<img src="img/Logo.png" alt="">
+			</div>
+		</header>
+			<nav>
+				<a href="index.html" class="button">Home</a>
+				<a href="#" class="button">About us</a>
+				<a href="contacts.html" class="button">Contacts</a>
+			</nav>
+			<main>
+				<h3>Google Maps</h3>
+				<!--The div element for the map -->
+				<div id="map"></div>
+			</main>
+			<aside>
+				<div class="box">
+					<div class="container-1">
+						<span class="icon"><i class="fa fa-search"></i></span>
+						<input type="search" id="search" placeholder="Search..." />
+					</div>
+				</div>
+			</aside>
+		<footer>
+			<p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> TheBestBikeShop All Rights Reserved</p>
+		</footer>
+	</div>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDoy64J28wXPwSal6IdDRTKU6xsOFSRSk&callback=initMap&libraries=&v=weekly" async>
+	</script>
+</body>
+</html>
