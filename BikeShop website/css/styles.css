@@ -1,43 +1,14 @@
 @import "normalize.css";
 
-html {
-	height: 100%;
-}
-
-body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	font-family: 'Roboto', sans-serif;
-}
-
-.item__footer a {
-	color: #404040;
-}
-
-.item__footer a:hover,
-.item__footer a:focus {
-	color: #d24a4c;
-	transition: all 0.2s linear;
-}
-
-a, a:visited {
-	text-decoration: none;
-}
-
-h2 {
-	margin: 0 auto;
-	text-transform: uppercase;
-}
-
-ul {
-	padding: 0;
-}
-
-ul li {
-	list-style: none;
-	padding: 0 5px 0 5px;
-	text-align: center;
+.container {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 10rem auto 10rem;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas: 
+	"head head head"
+	"panleft main panright"
+	"footer footer footer";
 }
 
 /*Search form*/
@@ -51,17 +22,19 @@ ul li {
 	font-size: 10pt;
 	float: left;
 	color: #6e6e6e;
-	padding-left: 15px;
+	padding: 0 10px 0 10px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
 
-.button {
+
+.nav-link {
 	text-decoration: none;
+	width: 100%;
 	display: inline-block;
 	overflow-wrap: break-word;
-	padding: 15px 5px 15px 5px;
+	padding: 5px 10px 5px 10px;
 	line-height: 25px;
 	border-radius: 45px;
 	font-family: 'Montserrat', sans-serif;
@@ -76,7 +49,7 @@ ul li {
 	transition: .3s;
 }
 
-.button:hover {
+.nav-link:hover {
 	background: #64c29e;
 	box-shadow: 0 15px 20px rgba(100, 194, 158, .4);
 	color: #fff;
@@ -86,27 +59,18 @@ ul li {
 header {
 	background: url(../img/Header.png) center;
 	color: #fff;
-	min-height: 5rem;
 	padding: 15px;
 	grid-area: head;
 }
 
-.header__logo {
-	display: flex;
-	justify-content: space-between;
-}
-
 nav {
-	display: flex;
-	flex-direction: column;
 	background: #4d4959;
 	padding: 15px;
 	grid-area: panleft;
 }
 
-nav a {
-	margin-top: 5px;
-	margin-bottom: 138px;
+nav ul li {
+	margin-bottom: 15px;
 }
 
 aside {
@@ -125,7 +89,6 @@ footer {
 
 main {
 	position: relative;
-	padding: 15px;
 	grid-area: main;
 	display: grid;
 	margin: 0 auto;
@@ -135,6 +98,23 @@ main {
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: auto;
 	grid-gap: 1rem;
+}
+
+.item {
+	overflow: hidden;
+	border: 1px solid #64c29e;
+	border-radius: 10px;
+	padding: 0px 3% 0 3%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-shadow: 5px 3px 3px 2px rgba(0, 0, 0, .05);
+}
+
+.item__footer {
+	font-size: 13px;
+	border-top: 1px dashed grey;
 }
 
 .item__footer ul li {
@@ -159,17 +139,16 @@ main {
 	margin: 0 auto;
 }
 
-.item {
-	overflow: hidden;
-	border: 1px solid #64c29e;
-	border-radius: 10px;
-	padding: 0px 3% 0 3%;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	box-shadow: 5px 3px 3px 2px rgba(0, 0, 0, .05);
+.item__footer a {
+	color: #404040;
 }
+
+.item__footer a:hover,
+.item__footer a:focus {
+	color: #d24a4c;
+	transition: all 0.2s linear;
+}
+
 
 .item__header {
 	padding-top: 10px;
@@ -216,24 +195,15 @@ main {
 	justify-content: space-between;
 }
 
-.item__footer {
-	font-size: 13px;
-	border-top: 1px dashed grey;
-}
-
 .item__img {
-	display: flex;
 	padding-top: 15px;
 	margin-top: 0;
-	max-width: 100%;
-	min-width: 100px;
 	z-index: -1;
 }
 
 .item__img img {
-	flex: 1 1 auto;
-	width: 100%;
-	min-width: 70px;
+	height: auto;
+	max-width: 100%;
 }
 
 .item__price {
@@ -250,17 +220,6 @@ main {
 .old-price {
 	color: #878787;
 	text-decoration: line-through;
-}
-
-.container {
-	display: grid;
-	height: 100vh;
-	grid-template-columns: 10rem auto 10rem;
-	grid-template-rows: auto 1fr auto;
-	grid-template-areas: 
-	"head head head"
-	"panleft main panright"
-	"footer footer footer";
 }
 
 @media only screen and (max-width: 970px) {
@@ -282,12 +241,17 @@ main {
 		"footer footer footer";
 	}
 	nav {
-		flex-direction: row;
+		padding: 0 10px 0 10px;
+	}
+	nav ul {
+		margin: 15px 0 15px 0;
+		display: flex;
 		justify-content: space-between;
 	}
+	nav ul li {
+		margin: 0;
+	}
 	nav a {
-		margin-top: 0;
-		margin-bottom: 0;
 		min-width: 90px;
 	}
 }
@@ -302,10 +266,13 @@ main {
 	nav {
 		padding: 10px;
 	}
+	nav ul {
+		margin: 0;
+	}
 	nav a {
 		min-width: 70px;
 	}
-	.button {
+	.nav-link {
 	padding: 5px;
 	letter-spacing: 1px;
 	}

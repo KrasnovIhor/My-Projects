@@ -425,3 +425,42 @@ td,
 th {
   padding: 0;
 }
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+h2 {
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+  padding: 0 5px 0 5px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h3 {
+  margin: 1.1rem;
+}
