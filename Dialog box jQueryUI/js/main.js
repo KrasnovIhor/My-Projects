@@ -1,6 +1,8 @@
 $(document).ready(function () {
   
-  $( "#dialog" ).dialog({
+  var dialog = $("#dialog");
+
+  dialog.dialog({
     autoOpen: false,
     width: 400,
     buttons: [
@@ -21,7 +23,7 @@ $(document).ready(function () {
 
   // Link to open the dialog
   $( "#dialog-link" ).click(function( event ) {
-    $( "#dialog" ).dialog( "open" );
     event.preventDefault();
+    dialog.dialog("open");
   });
 })
