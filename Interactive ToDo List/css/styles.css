@@ -1,0 +1,94 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #f2f2f2;
+}
+
+.list {
+	position: relative;
+	background: #fff;
+	width: 270px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
+
+.list h2 {
+	font-size: 20px;
+	background: rgb(255,255,255);
+	background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(209,208,208,1) 100%);
+	color: #616161;
+	padding: 10px 20px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+.list {
+	position: relative;
+}
+
+.list label:last-child {
+	border-bottom: none;
+}
+
+.list label {
+	position: relative;
+	padding: 15px 0;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.list label input {
+	visibility: hidden;
+	appearance: none;
+}
+
+.item-text {
+	position: relative;
+	font-weight: 700;
+	color: #8a8a8a;
+}
+
+.item-circle {
+	position: relative;
+	left: 20px;
+	margin-right: 35px;
+	width: 30px;
+	height: 30px;
+	border: 3px solid #8a8a8a;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.list label input:checked ~ .item-text {
+	text-decoration: line-through;
+	color: #17bf26;
+}
+
+.list label input:checked ~ .item-circle {
+	border: 3px solid #17bf26;
+}
+
+.list label input:checked ~ .item-circle:before {
+	content: '';
+	position: absolute;
+	top: 6px;
+	width: 10px;
+	height: 6px;
+	border-left: 4px solid #17bf26;
+	border-bottom: 4px solid #17bf26;
+	transform: rotate(-45deg);
+	color: #17bf26;
+}
