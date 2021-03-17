@@ -1,20 +1,18 @@
 $(document).ready(function () {
 	
 	$("#calendar").datepicker();
-
-	var availableTags = [];
-	var title_array = Array.prototype.slice.call(document.querySelectorAll('.item__header h2'));
 	
-	function addTags() {
-		for (let i = 0; i < title_array.length; i++) {
-			availableTags.push(title_array[i].textContent);
+	(function autocomplete() {
+		var availableTags = [],
+			titleArr = [].slice.call(document.querySelectorAll('.item__header h2'));
+
+		for (let i = 0; i < titleArr.length; i++) {
+			availableTags.push(titleArr[i].innerHTML);
 		}
-	}
 
-	addTags();
-
-	$( "#tags" ).autocomplete({
+		$("#tags").autocomplete({
 			source: availableTags
-	});
-	
+		});
+	})();
+
 });
