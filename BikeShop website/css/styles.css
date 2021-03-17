@@ -3,7 +3,7 @@
 /* Inline Calendar */
 .ui-datepicker-inline {
   width: 100%;
-	margin-top: 60px;
+	margin-top: 20px;
 }
 
 
@@ -20,19 +20,12 @@
 
 /*Search form*/
 
-.container-1 input#search{
-	width: 100%;
-	height: 40px;
-	background: #bdbdbd;
-	box-sizing: border-box;
-	border: none;
-	font-size: 10pt;
-	float: left;
-	color: #6e6e6e;
-	padding: 0 10px 0 10px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+label {
+	color: #fff;
+}
+
+#tags {
+	margin-top: 10px;
 }
 
 
