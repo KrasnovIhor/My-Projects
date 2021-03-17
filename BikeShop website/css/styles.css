@@ -1,9 +1,16 @@
 @import "normalize.css";
 
+/* Inline Calendar */
+.ui-datepicker-inline {
+  width: 100%;
+	margin-top: 60px;
+}
+
+
 .container {
 	display: grid;
 	height: 100vh;
-	grid-template-columns: 10rem auto 10rem;
+	grid-template-columns: 10rem auto 17rem;
 	grid-template-rows: auto 1fr auto;
 	grid-template-areas: 
 	"head head head"

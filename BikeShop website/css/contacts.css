@@ -1,5 +1,11 @@
 @import "normalize.css";
 
+/* Inline Calendar */
+
+.ui-datepicker-inline {
+	margin-top: 6rem;
+}
+
 /* Contact form */
 
 input[type=text], select, textarea {
@@ -61,6 +67,9 @@ main {
 }
 	nav {
 		padding: 0 10px 0 10px;
+	}
+	.ui-datepicker-inline {
+		margin-top: 3.5rem;
 	}
 }
 

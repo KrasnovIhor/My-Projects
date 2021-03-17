@@ -11,9 +11,17 @@ nav {
 	height: 100vh;
 }
 
+/* Inline Calendar */
+
+.ui-datepicker-inline {
+	margin-top: 6rem;
+}
+
 @media only screen and (max-width: 768px) {
 	nav {
 		height: 100%;
+	}
+.ui-datepicker-inline {
+	margin-top: 3.5rem;
 }
-
-
+}
