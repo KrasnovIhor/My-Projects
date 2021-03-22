@@ -1,0 +1,31 @@
+body {
+	background-color: rgb(204, 237, 252);
+}
+
+#photo-grid img {
+	cursor: move;
+	width: 100px;
+
+}
+
+.trash {
+	position: relative;
+	padding: 10px 10px;
+	border: 1px solid white;
+	margin-bottom: 10px;
+	width: 50%;
+}
+
+.highlight {
+	border: 1px dashed #b5c051;
+	-moz-border-radius: 10px;
+}
+
+.highlight-accept {
+	background: #d9dfa4; 
+}
+
+.removed {
+	display: none;
+}
+

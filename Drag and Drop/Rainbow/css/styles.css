@@ -1,0 +1,32 @@
+html {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+  font-family: "Trebuchet MS", sans-serif;
+	margin: 50px;
+}
+
+#button {
+	margin: 10px 0;
+}
+
+.wrapper {
+	text-align: center;
+	height: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.wrapper div {
+	position: relative;
+	height: 50px;
+}
