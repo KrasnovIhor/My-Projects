@@ -15,4 +15,19 @@ $(document).ready(function () {
 		});
 	})();
 
+	// $("nav ul li a").click(function (event) {
+	// 	event.preventDefault();
+	// 	$.ajax({
+	// 		url: this.href,
+	// 		success: function (html) {
+	// 			$("main").empty().append(html);
+	// 			if ($("nav ul li a").attr("href") === "ajax/about.html") {
+	// 				$("head").append("<script src="js/index.js"></script>");
+	// 			} else {
+	// 				$("head script").remove();
+	// 			}
+	// 		}
+	// 	});
+	// })
+
 });
