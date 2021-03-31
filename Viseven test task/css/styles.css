@@ -1,0 +1,184 @@
+@import "normalize.css";
+
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	width: 945px;
+	margin: 0 auto;
+}
+.title {
+	font-weight: 700;
+	font-size: 34px;
+	text-align: center;
+	margin-bottom: 45px;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	padding: 20px 0;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	-o-transform: translate(-50%, 0);
+	-moz-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	width: 100%;
+	transition: .6s;
+	z-index: 1000;
+	padding-bottom: 20px;
+}
+nav.sticky {
+	background-color: #fff;
+	padding: 10px 0;
+	border-bottom: none;
+}
+.links {
+	display: flex;
+	justify-content: space-between;
+	width: 945px;
+}
+
+header {
+	padding: 40px 0 100px 0;
+	background-color: #fff;
+}
+
+.home {
+	margin-top: 40px;
+	border-top: 1px solid black;
+}
+
+.nav-link {
+	font-weight: 700;
+	font-size: 18px;
+	color: #828282;
+	transition: .3s;
+	font-size: 18px;
+}
+.nav-link:hover, .nav-link:active, .nav-link:focus {
+	color: #000;
+}
+
+.home__about {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.home__about > p {
+	margin: 35px 0;
+	font-size: 47px;
+}
+
+.home__title p {
+	font-size: 18px;
+	text-align: right;
+	margin: 0;
+}
+
+main {
+	background-color: #F4F4F4;
+	padding: 50px 0;
+}
+
+.about__profile {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.about__text {
+	font-size: 20px;
+	width: 450px;
+}
+
+.skills {
+	padding: 50px 0;
+	margin: 50px 0;
+	background-color: #fff;
+	height: 400px;
+}
+
+.slills__info {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+
+.skills__item {
+	text-align: center;
+}
+
+.skills__item p {
+	margin: 14px auto;
+	width: 80px;
+	font-weight: 700;
+	font-size: 14px;
+	text-align: center;
+	color: #828282;
+}
+
+.skills__item img {
+	z-index: 2;
+	width: 80px;
+	background: radial-gradient(75.99% 75.64% at 32.94% 22.44%, rgba(52, 54, 78, 0.98) 0%, #0C0824 100%);
+}
+.skills__item:last-child img {
+	background: none;
+	width: 125px;
+}
+
+.rating {
+  text-align: center;
+	font-size: 24px;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+	color: #E5E5E5;
+}
+
+.rating-photoshop span:nth-child(-n+4):before,
+.rating-illustrator span:nth-child(-n+3):before,
+.rating-effects span:nth-child(-n+3):before,
+.rating-figma span:before {
+	content: "\2605";
+	position: absolute;
+	color: black;
+}
+
+.portfolio__content {
+	text-align: center;
+}
+
+.portfolio a {
+	font-size: 18px;
+	display: block;
+	color: #000;
+	text-decoration: underline;
+	padding: 40px 0 85px 0;
+}
+
+.portfolio a:last-child {
+	padding-bottom: 50px;
+}
+
+footer {
+	padding: 60px 0;
+	background-color: #fff;
+	text-align: center;
+}
+
+.footer__links {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 0 auto;
+	width: 500px;
+}
