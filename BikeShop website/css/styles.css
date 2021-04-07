@@ -6,6 +6,10 @@
   margin-top: 20px;
 }
 
+.ui-widget {
+	margin-top: 20px;
+}
+
 .container {
   display: grid;
   height: 100vh;
@@ -75,6 +79,17 @@ aside {
   background: #495759;
   padding: 15px;
   grid-area: panright;
+}
+
+aside ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+aside ul li {
+	padding: 5px 30px;
+	min-width: 150px;
 }
 
 footer {
@@ -251,6 +266,15 @@ main {
   nav a {
     min-width: 90px;
   }
+
+	aside ul {
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+
+	aside ul li {
+		padding: 5px 10px;
+	}
 }
 
 @media only screen and (max-width: 420px) {

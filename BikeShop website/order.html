@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/order.css">
+	<title>Order now</title>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="order-container">
+
+			<form id="orderForm" role="form">
+				<h3>Order Now!</h3>
+				<label for="bikeList">Choose a bike</label>
+				<select name="bikeList" id="bikeList">
+					<option value="" selected=""></option>
+				</select>
+				<textarea name="comments" id="comments" cols="30" rows="5" placeholder="Comments..."></textarea>
+
+				<h4>Billing adress</h4>
+
+				<div class="divider divider-2">
+					<input class="billing-address" type="text" id="firstName" name="firstName" required placeholder="First name">
+					<input class="billing-address" type="text" id="lastName" name="lastName" required placeholder="Last name">
+				</div>
+				<div class="divider divider-2">
+					<input class="billing-address" type="text" id="streetAdress" name="streetAdress" required
+						placeholder="Street Adress">
+					<div class="city">
+						<span>City</span>
+						<select class="billing-address" name="region" id="region">
+							<option value="" selected=""></option>
+						</select>
+					</div>
+				</div>
+				<div class="divider divider-2">
+					<input pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==5) return false;" class="billing-address"
+						type="number" id="zip" name="zip" required placeholder="Zip code">
+					<input class="billing-address" type="tel" id="phone" name="phone" required placeholder="Phone number">
+				</div>
+
+				<h4>Delivery adress</h4>
+				<label for="delivery">Same as Billing address</label>
+				<input type="checkbox" name="delivery" id="deliveryCheck">
+				<div class="divider divider-2">
+					<input class="delivery-address" type="text" id="deliveryFirstName" name="firstName" required
+						placeholder="First name">
+					<input class="delivery-address" type="text" id="deliveryLastName" name="lastName" required
+						placeholder="Last name">
+				</div>
+				<div class="divider divider-2">
+					<input class="delivery-address" type="text" id="deliveryStreetAdress" name="streetAdress" required
+						placeholder="Street Adress">
+					<div class="city">
+						<span>City</span>
+						<select class="delivery-address" name="region" id="deliveryRegion">
+							<option value="" selected=""></option>
+						</select>
+					</div>
+				</div>
+				<div class="divider divider-2">
+					<input pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==5) return false;" class="delivery-address"
+						type="number" id="deliveryZip" name="zip" required placeholder="Zip code">
+					<input class="delivery-address" type="tel" id="deliveryPhone" name="phone" required
+						placeholder="Phone number">
+				</div>
+
+				<h4>Delivery date</h4>
+
+				<div class="divider divider-3">
+					<select id="year"></select>
+					<select id="month"></select>
+					<select id="day"></select>
+				</div>
+
+				<h4>Payment</h4>
+
+				<select required name="payment" id="payment">
+					<option value=""></option>
+					<option value="Credit Card">Credit Card</option>
+					<option value="Cash">Cash</option>
+				</select>
+
+				<div class="credit-card-container removed">
+					<p class="error" id="cardErrorMessage"></p>
+					<div class="divider divider-3">
+						<input pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==16) return false;" type="number"
+							id="cardNumber" name="cardNumber" placeholder="Card number">
+						<input pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" type="number"
+							id="expirationDate" name="expirationDate" placeholder="Expiration Date">
+						<input pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;" type="number" id="cvv"
+							name="cvv" placeholder="CVV">
+					</div>
+				</div>
+
+				<div>
+					<label for="create-acc">Create account?</label>
+					<input name="create-acc" id="createAcc" type="checkbox">
+				</div>
+				<div class="account-create divider divider-3 removed">
+					<input id="createUsername" type="text" placeholder="Username">
+					<input id="createPassword" type="password" placeholder="Password">
+					<input id="confirmPassword" type="password" placeholder="Confirm password">
+					<p id="accountErrorMessage"></p>
+				</div>
+
+				<input id="submit-btn" type="submit" value="Submit">
+			</form>
+			<button class="back-btn"><a href="index.html">Back</a></button>
+
+
+
+
+		</div>
+	</div>
+
+	<script src="./js/order.js"></script>
+</body>
+
+</html>

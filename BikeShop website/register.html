@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/register.css">
+	<title>Task 3.1</title>
+</head>
+<body>
+	<script src="./js/facebook.js"></script>
+
+<div class="wrapper">
+	<div class="register-container">
+
+		<form id="signInForm" role="form">
+			<h3>Create Account</h3>
+			<input type="text" id="userName" name="userName" required placeholder="Username">
+			<input type="email" id="email" name="email" required placeholder="E-mail">
+			<input type="password" id="password" name="password" required placeholder="Password">
+			<input type="password" id="confirm" name="confirm" required placeholder="Confirm password">
+			<input id="submit-btn" type="submit" value="Submit">
+		</form>
+
+		<button class="back-btn"><a href="index.html">Back</a></button>
+
+		<div class="fb-login-button">
+			<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+			</fb:login-button>
+		</div>
+		
+		<div id="status">
+		</div>
+
+	</div>
+</div>
+	
+	<script src="./js/register.js"></script>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+</body>
+</html>
