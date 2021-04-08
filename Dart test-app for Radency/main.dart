@@ -3,7 +3,7 @@ List<List<int>> combinations = [];
 void main() {
 
   print(chooseBestDistance(174, 3, [51, 56, 58, 59, 61]));
-  
+  print(chooseBestDistance(163, 3, [50]));
 }
 
 int chooseBestDistance(int t, int k, List<int> ls) {
