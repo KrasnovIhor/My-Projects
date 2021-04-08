@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			"Retro 5.6",
 			"Liv BeLiv F 2021",
 		],
+		data = [],
+		inputs = document.querySelectorAll("input"),
+		selects = document.querySelectorAll("select"),
 		cities = ["Odesa", "Kyiv", "Lviv", "Kharkiv", "Dnipro", "Kherson"],
 		orderForm = document.getElementById("orderForm"),
 		billingCitySelect = document.getElementById("region"),
@@ -156,8 +159,33 @@ document.addEventListener("DOMContentLoaded", () => {
 	//Submitting form
 
 	orderForm.addEventListener("submit", (event) => {
+		event.preventDefault();
 		const cardNumber = document.getElementById("cardNumber"),
+			order = {
+				id: Date.now(),
+			},
 			errorMessage = document.getElementById("cardErrorMessage");
+
+		for (let i = 0; i < inputs.length || i < selects.length; i++) {
+			const inputElement = inputs[i],
+				inputElementId = inputElement.getAttribute("id");
+			if (
+				inputElementId !== "confirmPassword" &&
+				inputElementId !== "submit-btn" &&
+				inputElementId !== "createAcc"
+			) {
+				order[inputElementId] = inputElement.value;
+			} else continue;
+
+			order[inputElementId] = inputElement.value;
+		}
+
+		for (let s = 0; s < selects.length; s++) {
+			const selectElement = selects[s],
+				selectElementId = selectElement.getAttribute("id");
+
+			order[selectElementId] = selectElement.value;
+		}
 
 		if (cardNumber.value.length === 0) {
 			event.preventDefault();
@@ -171,6 +199,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (confirmPassInput.value !== createPassInput.value) {
 			event.preventDefault();
 			alert("Passwords do not match");
+		} else {
+			data.push(order);
+			console.log(data);
+
+			localStorage.setItem("orders", JSON.stringify(data));
 		}
 	});
 });
