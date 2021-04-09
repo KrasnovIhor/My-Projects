@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+	<title>Task 3.3</title>
+</head>
+
+<body>
+	<div class="carousel-container">
+		<i class="fas fa-arrow-right" id="nextBtn"></i>
+		<i class="fas fa-arrow-left" id="prevBtn"></i>
+		<div class="carousel-slide">
+			<img src="./img/audi5.jpg" alt="slide5" id="lastClone">
+			<img src="./img/audi1.jpg" alt="slide1">
+			<img src="./img/audi2.jpg" alt="slide2">
+			<img src="./img/audi3.jpg" alt="slide3">
+			<img src="./img/audi4.jpg" alt="slide4">
+			<img src="./img/audi5.jpg" alt="slide5">
+			<img src="./img/audi1.jpg" alt="slide1" id="firstClone">
+		</div>
+	</div>
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- The Close Button -->
+		<span class="close">&times;</span>
+
+		<!-- Modal Content (The Image) -->
+		<img class="modal-content" id="img01">
+
+		<!-- Modal Caption (Image Text) -->
+		<div id="caption"></div>
+	</div>
+
+	<div class="autoplay-btn">
+		<button id="autoSlide">Start auto play</button>
+		<button id="stopSlide">Stop Play</button>
+	</div>
+
+	<script src="./js/main.js"></script>
+</body>
+
+</html>
