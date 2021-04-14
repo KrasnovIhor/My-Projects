@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Weather forecast</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="weather">
+			<div class="weather__daily">
+				<h2 id="locotaionDaily"><span id="location"></span></h2>
+				<h2 id="temperatureDaily">
+					<img id="tempIcon" src="#" alt="temp icon">
+					<span id="tempValue"></span><span></span>
+				</h2>
+				<p id="weatherDescr"></p>
+				<p id="timeNow"></p>
+				<table>
+					<tr>
+						<td>Wind</td>
+						<td id="windValue"></td>
+					</tr>
+					<tr>
+						<td>Cloudiness</td>
+						<td id="cloudValue"></td>
+					</tr>
+					<tr>
+						<td>Pressure</td>
+						<td id="pressureValue"></td>
+					</tr>
+					<tr>
+						<td>Humidity</td>
+						<td id="humidityValue"></td>
+					</tr>
+					<tr>
+						<td>Sunrise</td>
+						<td id="sunriseTime"></td>
+					</tr>
+					<tr>
+						<td>Sunset</td>
+						<td id="sunsetTime"></td>
+					</tr>
+					<tr>
+						<td>Geo coords</td>
+						<td id="geoCoords"></td>
+					</tr>
+				</table>
+			</div>
+			<div class="weather__weekly">
+				<div class="weather__header">
+					<p id="firstDate" class="weather__date"></p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>
